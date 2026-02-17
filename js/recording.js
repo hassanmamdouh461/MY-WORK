@@ -1,6 +1,6 @@
 function runRecording(){
   if (recording) {
-    console.log('recording')
+    // console.log('recording')
    
     // 3D Renderer
     let offscreenCanvas = document.createElement("canvas")
@@ -19,7 +19,7 @@ function runRecording(){
   if (recordedFrames === numFrames) {
     recording = false;
     recordedFrames = 0;
-    console.log('recording stopped');
+    // console.log('recording stopped');
 
     encoder.finalize();
     const uint8Array = encoder.FS.readFile(encoder.outputFilename);

@@ -270,9 +270,10 @@ function resizeForSave(){
 function resizeForPreview(){
   var tempWidth, tempHeight;
 
-  if(saveMode == 0){
-    resizeCanvas(windowWidth, windowHeight,WEBGL);
-  } else if(saveMode == 1){
+  resizeCanvas(windowWidth, windowHeight, WEBGL);
+  
+  // Clean up unused modes
+  if(false){
     if(windowWidth > windowHeight * 9/16){
       tempHeight = windowHeight;
       tempWidth = windowHeight * 9/16;
@@ -281,7 +282,7 @@ function resizeForPreview(){
       tempHeight = windowWidth * 16/9;
     }
     resizeCanvas(tempWidth, tempHeight, WEBGL);
-  } else if(saveMode == 2){
+  } else if(false){
     if(windowWidth < windowHeight){
       tempWidth = windowWidth;
       tempHeight = windowWidth;
