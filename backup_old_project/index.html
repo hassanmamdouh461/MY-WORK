@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinetic Text Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kinetic Text Generator</h1>
+        <input type="text" id="userText" placeholder="اكتب النص هنا...">
+        <div id="output" class="kinetic-text">مرحبا بك!</div>
+        <div class="controls">
+            <label>الحركة:
+                <select id="animationType">
+                    <option value="flash">وميض (Flash)</option>
+                    <option value="wave">موجة (Wave)</option>
+                    <option value="scale">تكبير/تصغير (Scale)</option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

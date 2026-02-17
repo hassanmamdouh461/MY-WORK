@@ -1,0 +1,61 @@
+body {
+    background: #181818;
+    color: #fff;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    background: #232323;
+    padding: 2rem 3rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    text-align: center;
+}
+input[type="text"] {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    width: 80%;
+}
+.kinetic-text {
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
+    min-height: 3.5rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.controls {
+    margin-top: 1rem;
+}
+/* Flash Animation */
+.flash {
+    animation: flash 0.7s infinite alternate;
+}
+@keyframes flash {
+    0% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+/* Wave Animation */
+.wave span {
+    display: inline-block;
+    animation: wave 1.2s infinite;
+    animation-delay: calc(var(--i) * 0.1s);
+}
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+}
+/* Scale Animation */
+.scale {
+    animation: scale 0.8s infinite alternate;
+}
+@keyframes scale {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.3); }
+}
