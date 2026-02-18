@@ -16,7 +16,7 @@ function drawText(p, inp, tFont){   // straight text
   pg[p].textSize(pgTextSize);
   pg[p].textAlign(CENTER);
   pg[p].textFont(tFont);
-  pg[p].text(inp, pgStrip[p].width/2, pgStrip[p].height/2 + pgTextSize*0.7/2);
+  pg[p].text(inp, pg[p].width/2, pg[p].height/2 + pgTextSize*0.7/2);
 }
 
 

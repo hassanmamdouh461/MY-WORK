@@ -5,10 +5,10 @@
 ## المميزات
 
 - أكثر من 13 نمط تحريك مختلف (Arcer، Bend، Box، BugEyes، Halo، RiseSun، Shutters، SlotMachine، Snap، Split، Starburst، Twist، وغيرها)
-- تخصيص كامل للنص والألوان وسرعة الحركة
+- تخصيص كامل للنص والألوان وسرعة الحركة واختيار الخط
 - مجموعة خطوط متنوعة مدمجة
 - يعمل على الكمبيوتر والموبايل
-- سهل التعديل بدون الحاجة لفهم الكود المعقد
+- كل التعديلات تتم من الكود مباشرة
 
 ## طريقة التشغيل
 
@@ -33,6 +33,11 @@ var foregroundColorHex = "#ffffff"; // لون النص
 
 // سرعة الحركة (30 افتراضي، كلما زاد كلما زادت السرعة)
 var animationSpeed = 30;
+
+// اختيار الخط (رقم من 0 إلى 6)
+// 0: TT Bluescreens  1: TT Travels  2: Inter
+// 3: Agrandir        4: ApocLC      5: BaseNeueTrial  6: Cairo
+var fontIndex = 0;
 ```
 
 ## هيكل المشروع
@@ -46,7 +51,6 @@ var animationSpeed = 30;
 │   ├── animators.js    → الكلاسات الأساسية للحركة
 │   ├── update.js       → منطق التحديث
 │   ├── textures.js     → مساعدات الخامات
-│   ├── recording.js    → دعم تسجيل الفيديو
 │   └── 0_*.js          → أنماط الحركة المختلفة
 └── resources/          → الخطوط
 ```
