@@ -1,56 +1,56 @@
-# Kinetic Typography Generator
+# مولّد الخط الحركي (Kinetic Typography Generator)
 
-A web-based kinetic typography tool that displays animated text with various visual effects. Built with [p5.js](https://p5js.org/).
+أداة ويب لعرض النصوص بتأثيرات بصرية متحركة ومتنوعة. مبنية باستخدام [p5.js](https://p5js.org/).
 
-## Features
+## المميزات
 
-- Multiple animation styles (Arcer, Bend, Box, BugEyes, Halo, RiseSun, Shutters, SlotMachine, Snap, Split, Starburst, Twist, and more)
-- Fully customizable text, colors, and animation speed
-- Multiple font options included
-- Responsive — works on desktop and mobile
-- Easy to customize without touching the complex code
+- أكثر من 13 نمط تحريك مختلف (Arcer، Bend، Box، BugEyes، Halo، RiseSun، Shutters، SlotMachine، Snap، Split، Starburst، Twist، وغيرها)
+- تخصيص كامل للنص والألوان وسرعة الحركة
+- مجموعة خطوط متنوعة مدمجة
+- يعمل على الكمبيوتر والموبايل
+- سهل التعديل بدون الحاجة لفهم الكود المعقد
 
-## How to Run
+## طريقة التشغيل
 
-1. Open this folder in VS Code or Terminal.
-2. Run a local server:
+1. افتح المجلد في VS Code أو Terminal.
+2. شغّل سيرفر محلي:
    ```bash
    python -m http.server 8000
    ```
-3. Open `http://localhost:8000` in your browser.
+3. افتح `http://localhost:8000` في المتصفح.
 
-## How to Customize
+## طريقة التخصيص
 
-All settings are in one place — `js/config.js`:
+كل الإعدادات موجودة في ملف واحد — `js/config.js`:
 
 ```javascript
-// The text to display (use \n for new lines)
-var starterText = "YOUR\nTEXT\nHERE";
+// النص المعروض (استخدم \n للسطر الجديد)
+var starterText = "نصك\nهنا";
 
-// Colors (Hex codes)
-var backgroundColorHex = "#000000"; // Background Color
-var foregroundColorHex = "#ffffff"; // Text Color
+// الألوان (كود Hex)
+var backgroundColorHex = "#000000"; // لون الخلفية
+var foregroundColorHex = "#ffffff"; // لون النص
 
-// Animation Speed (30 is default, higher = faster)
+// سرعة الحركة (30 افتراضي، كلما زاد كلما زادت السرعة)
 var animationSpeed = 30;
 ```
 
-## Project Structure
+## هيكل المشروع
 
 ```
-├── index.html          → Main page
-├── style.css           → Styling
+├── index.html          → الصفحة الرئيسية
+├── style.css           → التنسيق
 ├── js/
-│   ├── config.js       → ⚙️ YOUR SETTINGS (Edit this)
-│   ├── sketch_flash.js → Main animation engine
-│   ├── animators.js    → Animation base classes
-│   ├── update.js       → Update logic
-│   ├── textures.js     → Texture helpers
-│   ├── recording.js    → Video recording support
-│   └── 0_*.js          → Individual animation styles
-└── resources/          → Fonts
+│   ├── config.js       → ⚙️ إعداداتك (عدّل هنا)
+│   ├── sketch_flash.js → محرك الحركة الرئيسي
+│   ├── animators.js    → الكلاسات الأساسية للحركة
+│   ├── update.js       → منطق التحديث
+│   ├── textures.js     → مساعدات الخامات
+│   ├── recording.js    → دعم تسجيل الفيديو
+│   └── 0_*.js          → أنماط الحركة المختلفة
+└── resources/          → الخطوط
 ```
 
-## License
+## الرخصة
 
-Feel free to use, modify, and distribute this project.
+يمكنك استخدام هذا المشروع وتعديله وتوزيعه بحرية.
