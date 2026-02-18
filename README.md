@@ -1,4 +1,14 @@
-# Kinetic Typography Project
+# Kinetic Typography Generator
+
+A web-based kinetic typography tool that displays animated text with various visual effects. Built with [p5.js](https://p5js.org/).
+
+## Features
+
+- Multiple animation styles (Arcer, Bend, Box, BugEyes, Halo, RiseSun, Shutters, SlotMachine, Snap, Split, Starburst, Twist, and more)
+- Fully customizable text, colors, and animation speed
+- Multiple font options included
+- Responsive — works on desktop and mobile
+- Easy to customize without touching the complex code
 
 ## How to Run
 
@@ -11,28 +21,36 @@
 
 ## How to Customize
 
-I have made it very easy for you to edit the text and colors without touching the complex code.
+All settings are in one place — `js/config.js`:
 
-1. Go to `js/config.js`.
-2. Edit the **Text** inside the quotes:
-   ```javascript
-   var starterText = "YOUR\nTEXT\nHERE";
-   ```
-   (Use `\n` for new lines).
-3. Edit the **Colors** (Hex Codes):
-   ```javascript
-   var backgroundColorHex = "#000000"; // Black
-   var foregroundColorHex = "#ffffff"; // White
-   ```
-4. Edit **Animation Speed**:
-   ```javascript
-   var animationSpeed = 30; // Higher is faster
-   ```
+```javascript
+// The text to display (use \n for new lines)
+var starterText = "YOUR\nTEXT\nHERE";
+
+// Colors (Hex codes)
+var backgroundColorHex = "#000000"; // Background Color
+var foregroundColorHex = "#ffffff"; // Text Color
+
+// Animation Speed (30 is default, higher = faster)
+var animationSpeed = 30;
+```
 
 ## Project Structure
 
-- `index.html`: The main page (Cleaned up).
-- `js/config.js`: **YOUR SETTINGS** (Edit this).
-- `js/sketch_flash.js`: Main animation logic.
-- `js/animators.js`: Animation classes.
-- `style.css`: Basic styling.
+```
+├── index.html          → Main page
+├── style.css           → Styling
+├── js/
+│   ├── config.js       → ⚙️ YOUR SETTINGS (Edit this)
+│   ├── sketch_flash.js → Main animation engine
+│   ├── animators.js    → Animation base classes
+│   ├── update.js       → Update logic
+│   ├── textures.js     → Texture helpers
+│   ├── recording.js    → Video recording support
+│   └── 0_*.js          → Individual animation styles
+└── resources/          → Fonts
+```
+
+## License
+
+Feel free to use, modify, and distribute this project.
