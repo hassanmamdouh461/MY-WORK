@@ -222,3 +222,7 @@ function windowResized(){
   cwidth = width;
   cheight = height;
 }
+
+// Prevent default touch events (scroll, pull-to-refresh)
+document.addEventListener('touchmove', function(e) { e.preventDefault(); }, { passive: false });
+document.addEventListener('touchstart', function(e) { e.preventDefault(); }, { passive: false });
